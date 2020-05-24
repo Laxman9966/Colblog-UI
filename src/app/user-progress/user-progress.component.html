@@ -1,0 +1,83 @@
+<app-header></app-header>
+ 
+<div class="container-fluid" style="min-height: 500px;"> 
+ <div class="container container1 mar2060">
+        <div class="lefting col-md-12">
+                <a routerLink="/home">Dastboard </a> / <a routerLink="/progress">progress info </a> /
+                <a href="http://localhost:9001/cgi-bin/run.py" target="_blank">Run ML</a>
+            </div>
+    <div class="col-md-3 marT20">
+      <div class="col-md-12 step-circle" *ngFor="let step of steps; let isFirst = first">
+        <div [class.active]="isActive === step.id">
+            <div class="dots" *ngIf="!isFirst">
+                <div class="img1">
+                  <img src="../../assets/images/loading-stc.png" style="width: 65px;"/>
+                </div>
+                <div class="img2">
+                  <img src="../../assets/images/loading-gif.gif" style="width: 65px;"/>
+                </div>
+              </div>
+              <div class="checkmark">
+                <div class="success-checkmark" *ngIf=step.isCompleted>
+                  <i class="fa fa-check"></i>
+                </div>
+                <div class="error-checkmark" *ngIf=!step.isCompleted>
+                  <i class="fa fa-times"></i>
+                </div>
+              </div>
+          <div class="circle">
+            <img src={{step.logo}} class="img-responsive" />
+          </div>
+          <h2> {{step.name}}</h2>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-9 box1 box-shadow">
+      <!--      <div class="progress">
+        <div class="progress-bar progress-bar-info progress-bar-striped" role="progressbar" aria-valuenow="50"
+          aria-valuemin="0" aria-valuemax="100" #progressBar>
+          {{progressbar.text}}
+        </div>
+      </div>-->
+      <h3 class="text-center">Processing <b>step {{processingStep}}</b></h3>
+      <div class="col-md-8 mart50">
+      <div class="process-ind">
+          <p><b>Data Acquisition Initialized…</b></p>
+          <p>- <span class="text-undline">_______</span> rows scanned</p>
+            <p>- Features scanned : <span class="text-undline">_______</span></p>
+                <p>- Labels to be predicted: <span class="text-undline">_______</span></p>
+                    <p>- Data Acquisition Successful. [Time taken :<span>0.7 sec</span>]</p>
+      </div>
+      <div class="process-ind">
+          <p><b>Data Preprocessing Initialized…</b></p>
+          <p>- Cleaning null values and outliers</p>
+          <p>- Transforming data…</p>
+          <p>- Converting data from series form to supervised form</p>
+          <p>- Data Cleaning Successful. [Time taken : <span>0.5 sec</span>]</p>
+      </div>
+      <div class="process-ind">
+          <p><b>Data Prediction Initialized…</b></p>
+          <p>- 72 hours of data to be predicted.</p>
+              <p>- Prediction Completed. Confidence : <span class="text-undline">___________</span>, Mean Square Error : <span class="text-undline">________</span></p>
+                  <p>- Generating Results</p>
+</div>
+</div>
+    <!-- <div class="col-md-4">
+        <h4 class="text-center">Data Split</h4>
+        <canvas id="myChart" height="200" width="200" ></canvas>
+    </div>
+    <br/> -->
+    <div class="clearfix"></div>
+    <!-- <ul class="list-inline pull-right marT20">
+            <li class="list-inline-item">
+                <button name="Save" class="btn btn-primary btn-sm" >Save</button>
+            </li>
+            <li class="list-inline-item">
+                <button name="Retraiv" class="btn btn-primary btn-sm" >Retrain</button>
+            </li>
+          </ul> -->
+  </div>
+</div>
+</div>
+<div class="cleartop"></div>
+<app-footer></app-footer>

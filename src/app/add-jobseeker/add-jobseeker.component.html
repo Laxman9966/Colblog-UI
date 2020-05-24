@@ -1,0 +1,46 @@
+<app-header></app-header>
+
+<div class="col-sm-6">
+<div class="container-fluid">
+<div class="box box-shadow">
+
+  <h2 class="text-center">Create JobSeeker Profile</h2>
+ 
+  
+
+  <form [formGroup]="addForm" (ngSubmit)="onSubmit()">
+    <div class="form-group">
+      <label for="email">Name:</label>
+      <input type="name" formControlName="name" placeholder="name" name="name" class="form-control" id="name">
+    </div>
+
+    <div class="form-group">
+      <label for="firstName">Resume Title:</label>
+      <input formControlName="resumeTitle" placeholder="resumeTitle" name="resumeTitle" class="form-control" id="resumeTitle">
+    </div>
+
+    <div class="form-group">
+      <label for="firstName">Experience:</label>
+      <input formControlName="experience" placeholder="experience" name="experience" class="form-control" id="experience">
+    </div>
+
+    <div class="form-group">
+      <label for="firstName">Email:</label>
+      <input type="email" formControlName="email" placeholder="Email" name="email" class="form-control" id="email">
+    </div>
+
+
+    <div class="form-group">
+      <label for="lastName">Password:</label>
+      <input formControlName="password" placeholder="Password" name="password" class="form-control" id="password">
+    </div>
+
+    <button class="btn btn-success">Add </button>
+    <a  class="btn btn-primary" [routerLink]="['/home']"> Cancel </a>
+    
+  </form>
+ 
+</div>
+</div>
+</div>
+<app-footer></app-footer>

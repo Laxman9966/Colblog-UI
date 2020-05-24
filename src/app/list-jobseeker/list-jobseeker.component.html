@@ -1,0 +1,36 @@
+<app-header></app-header>
+
+<div class="col-md-12">
+  <h2 class="text-center"> Job Seeker Details</h2>
+  <a  class="btn btn-primary" [routerLink]="['/home']"> Home </a>
+  <button class="btn btn-danger" (click)="addUser()"> Add User</button>
+  <table class="table table-striped">
+    <thead>
+    <tr>
+      <th class="hidden">Id</th>
+      <th>Name</th>
+      <th>Resume Title</th>
+      <th>Experience</th>
+      <th>Email</th>
+      <th>Password</th>
+    </tr>
+    </thead>
+    <tbody>
+
+    <tr *ngFor="let user of jobseekers">
+      <td class="hidden">{{user.id}}</td>
+      <td>{{user.name}}</td>
+      <td>{{user.resumeTitle}}</td>
+      <td>{{user.experience}}</td>
+      <td>{{user.email}}</td>
+      <td>{{user.password}}</td>
+      <td><button class="btn btn-danger" (click)="deleteUser(user)"> Delete</button>
+        <button class="btn btn-primary" (click)="editUser(user)" style="margin-left: 20px;"> Edit</button></td>
+    </tr>
+
+    </tbody>
+  </table>
+</div>
+
+
+<app-footer></app-footer>

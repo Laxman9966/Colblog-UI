@@ -1,0 +1,66 @@
+<app-header></app-header>
+
+<!--Weather Forecasting-->
+<div class="container-fluid">
+    <div class="col-sm-12">
+
+       
+
+
+        <div class="clearfix"></div>
+        <div class="box box-shadow">
+            <h3 class="text-left">Service: employer-service</h3>
+            <div class="col-md-4 errmsg"> </div>
+            <button class="btn btn-success" [routerLink]="['/add-employer']">Create Employer</button>
+           <button class="btn btn-success" [routerLink]="['/list-employer']">List Employers</button>
+           
+           <br>    <br>
+           <form class="modelForm" [formGroup]="modelForm" (ngSubmit)="getMesssage()">  
+               <!--(click)="getMesssage()"-->
+           <button class="btn btn-primary"> Get Message </button>
+        </form>
+           <h3 class="text-left">{{employerMessage}}</h3>
+            <div class="clearfix"></div>
+        </div>
+
+
+        <div class="clearfix"></div>
+        <div class="box box-shadow">
+            <h3 class="text-left">Service: jobseeker-service</h3>
+            <div class="col-md-4 errmsg"> </div>
+            <button class="btn btn-success" [routerLink]="['/add-jobseeker']">Create JobSeeker</button>
+           <button class="btn btn-success" [routerLink]="['/list-jobseeker']">List Profiles</button>
+            <div class="clearfix"></div>
+        </div>
+
+
+        <div class="clearfix"></div>
+        <div class="box box-shadow">
+            <h3 class="text-left">Service Communication</h3>
+            <div class="col-md-4 errmsg"> </div>
+            <button class="btn btn-success" [routerLink]="['/add-jobseeker']">Create JobSeeker</button>
+           <button class="btn btn-success" [routerLink]="['/list-jobseeker']">List Profiles</button>
+            <div class="clearfix"></div>
+        </div>
+
+
+
+        <div class="box box-shadow">
+        <div class="row">
+            <div class="col-sm-3"><a class="btn btn-success" [routerLink]="['/excelupload']"> Excel Uploader</a></div>
+            <div class="col-sm-3"><a class="btn btn-success" [routerLink]="['/manageuser']"> Manage User</a></div>
+            <div class="col-sm-3"><a class="btn btn-success" [routerLink]="['/manageuser']"> Manage User</a></div>
+          </div>
+          <br>
+          <div class="row">
+            <div class="col-sm-3"><a [routerLink]="['/add-jobseeker']"> Add JobSeeker</a></div>
+            <div class="col-sm-3"><a [routerLink]="['/edit-jobseeker']"> Edit JobSeeker</a></div>
+            <div class="col-sm-3"><a [routerLink]="['/list-jobseeker']"> List JobSeeker</a></div>
+          </div>
+        </div>
+
+
+    </div>
+</div>
+
+<app-footer></app-footer>

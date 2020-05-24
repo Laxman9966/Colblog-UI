@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>AIML</title>
+  <base href="/">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <link href="./style1.css" type="style/css"/>
+  <link href="styles.css" type="style/css" rel="stylesheet">
+<!--  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" crossorigin="anonymous"></script>  -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+ <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js"></script>
+  <script src="assets/js/progess.js"></script>
+  <script src="assets/js/chatbot.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.4.0/Chart.min.js"></script>
+<!--  <script src="assets/js/piechart.js"></script>-->
+  <script src="assets/js/custom.js"></script>
+</head>
+<body>
+  <app-root></app-root>
+   <script>
+    $(document).ready(function(){
+ $('.slimbar-container,#datatbl').hide();
+$('#btnupload').click(function(){
+$('.slimbar-container,#datatbl').show();
+$(function() {
+        var current_progress = 0;
+        var interval = setInterval(function() {
+            current_progress += 10;
+            $("#dynamic")
+            .css("width", current_progress + "%")
+            .attr("aria-valuenow", current_progress)
+            .text(current_progress + "% Complete");
+            if (current_progress >= 100)
+                clearInterval(interval);
+        }, 1000);
+      });
+    });
+    $(function() {
+        var current_progress = 0;
+        var interval = setInterval(function() {
+            current_progress += 10;
+            $("#dynamic1")
+            .css("width", current_progress + "%")
+            .attr("aria-valuenow", current_progress)
+            .text(current_progress + "% Complete");
+            if (current_progress >= 100)
+                clearInterval(interval);
+        }, 1000);
+      });
+    });
+    $(function() {
+        var current_progress = 0;
+        var interval = setInterval(function() {
+            current_progress += 10;
+            $("#dynamic1")
+            .css("width", current_progress + "%")
+            .attr("aria-valuenow", current_progress)
+            .text(current_progress + "% Complete");
+            if (current_progress >= 100)
+                clearInterval(interval);
+        }, 1000);
+      });
+      </script>
+      <script>
+      let step = 'step1';
+const step1 = document.getElementById('step1');
+const step2 = document.getElementById('step2');
+const step3 = document.getElementById('step3');
+const step4 = document.getElementById('step4');
+function next() {
+  if (step === 'step1') {
+    step = 'step2';
+    step1.classList.remove("is-active");
+    step1.classList.add("is-complete");
+    step2.classList.add("is-active");
+
+  } else if (step === 'step2') {
+    step = 'step3';
+    step2.classList.remove("is-active");
+    step2.classList.add("is-complete");
+    step3.classList.add("is-active");
+
+  } else if (step === 'step3') {
+    step = 'step4d';
+    step3.classList.remove("is-active");
+    step3.classList.add("is-complete");
+    step4.classList.add("is-active");
+
+  } else if (step === 'step4d') {
+    step = 'complete';
+    step4.classList.remove("is-active");
+    step4.classList.add("is-complete");
+
+  } else if (step === 'complete') {
+    step = 'step1';
+    step4.classList.remove("is-complete");
+    step3.classList.remove("is-complete");
+    step2.classList.remove("is-complete");
+    step1.classList.remove("is-complete");
+    step1.classList.add("is-active");
+  }
+}
+      </script>
+</body>
+</html>
+
+<!--
+  "../node_modules/jquery/dist/jquery.min.js",
+      "../node_modules/bootstrap/dist/js/bootstrap.js"    -->

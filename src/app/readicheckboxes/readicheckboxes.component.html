@@ -1,0 +1,111 @@
+<h3>Reactive Form</h3>
+<p *ngIf="isValidFormSubmitted && userForm.pristine" [ngClass] = "'success'">
+    Form submitted successfully.
+</p>
+<form [formGroup]="userForm" (ngSubmit)="onFormSubmit()">
+    <table>
+        <tr> 
+            <td>Name:</td>
+            <td> 
+                <input formControlName="uname">
+                <div *ngIf="userForm.get('uname').invalid && isValidFormSubmitted != null && !isValidFormSubmitted" [ngClass] = "'error'"> 
+                    Name required. 
+            </div>
+        </td>
+    </tr> 
+    <tr>
+        <td>Gender:</td>
+        <td> 
+            <input type="radio" value="male" formControlName="gender1" (change)='radio1change()'> Male
+            <input type="radio" value="female" formControlName="gender2"> Female
+<!--            <div *ngIf="userForm.get('gender').invalid && isValidFormSubmitted != null && !isValidFormSubmitted" [ngClass] = "'error'"> 
+                Gender required. 
+        </div>		 -->
+
+
+<div>
+    <h2>{{title}}</h2>
+      <input type="radio"  formControlName="gender11" value="1">
+      my one
+      <input type="radio"  formControlName="gender12" value="2">
+      my two
+      <input type="radio"  formControlName="gender13" value="3">
+      my three
+       <input type="radio"  formControlName="gender14" value="4">
+      my three
+
+    <p><button (click)="model.options = '1'">set one</button>
+    <p>{{debug}}
+</div> 
+
+
+
+
+    </td> 
+</tr>	  
+<tr>
+    <td>Are you married? </td>
+    <td>
+        <input type="checkbox" formControlName="married">
+    </td>
+</tr>	 
+<tr>
+    <td>Accept T & C </td>
+    <td>
+        <input type="checkbox" formControlName="tc">
+        <div *ngIf="userForm.get('tc').invalid && isValidFormSubmitted != null && !isValidFormSubmitted" [ngClass] = "'error'"> 
+            Accept T & C.
+    </div>		 
+</td>
+</tr>		 
+<tr> 	  
+    <td colspan="2">
+        <button>Submit</button>
+        <button type="button" (click)="setDefaultValues()">Set Default</button>
+        <button type="button" (click)="reset()">Reset</button>		  
+    </td>
+</tr>	   
+</table>  
+</form> 
+
+<div class="dropdown">
+  <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    Dropdown button
+  </button>
+  <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+    <a class="dropdown-item" href="#">Action</a>
+    <a class="dropdown-item" href="#">Another action</a>
+    <a class="dropdown-item" href="#">Something else here</a>
+  </div>
+</div>
+
+<br>
+<div class="dropdown">
+    <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Dropdown Example
+    <span class="caret"></span></button>
+    <ul class="dropdown-menu">
+      <li><a href="#">HTML</a></li>
+      <li><a href="#">CSS</a></li>
+      <li><a href="#">JavaScript</a></li>
+    </ul>
+  </div>
+
+
+
+
+
+<!--<br><br>
+<div>
+    <h2>{{title}}</h2>
+      <input type="radio" name="options" [(ngModel)]="model.options" value="1">
+      my one
+      <input type="radio" name="options" [(ngModel)]="model.options" value="2">
+      my two
+      <input type="radio" name="options" [(ngModel)]="model.options" value="3">
+      my three
+       <input type="radio" name="options" [(ngModel)]="model.options" value="4">
+      my three
+
+    <p><button (click)="model.options = '1'">set one</button>
+    <p>{{debug}}
+</div> -->

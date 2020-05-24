@@ -1,0 +1,289 @@
+
+
+.containerbox{
+    margin:5px;
+  background:#eee; 
+    border: 1px solid #ddd;
+    border-radius:3px;
+    padding: 50px 50px;
+     justify-content: center;
+      align-items: center;
+      
+  /*    margin-left: 200px;*/
+  }
+  
+  .rightdiv{
+      min-height:200px;
+      border:1px solid #eee; 
+        margin-top:5px;
+  background:#eee; 
+    border: 1px solid #efefef;
+    border-radius:3px;
+    padding: 5px 5px;
+     justify-content: center;
+      align-items: center;
+  /*    margin-left: 200px;*/
+  
+  }
+  
+  .usersettings{
+      float:right;
+  }
+  .heading{
+      font-size:16px;
+      font-weight: 500;
+      color:#aaa;
+  }
+  .header{
+      background:#6C4; 
+      min-height:72px; 
+  }
+  h5 {
+      text-align: left;
+      margin-left: 150px;
+      font-size:15px;
+      margin-top:5px; 
+  }
+  
+  a {
+      color: #007bff;
+      text-decoration: none;
+      background-color: transparent;
+      float: right;
+  }
+  
+  .welcomeuser{
+    margin-right:120px;
+      font-size:15px;
+      float:right;
+  }
+  .userlogin{
+      text-align: right;
+      margin-right:120px;
+      font-size:15px;
+      color:#0069d9;
+      vertical-align:bottom; 
+      line-height: 60px;
+  }
+  
+  .selector{
+      width: 280px;
+      padding: 8px;
+      border-radius: 4px;
+  }
+  
+  .datagrid{
+      padding:15px;
+  }
+  .tabler{
+      width : 100%;
+      
+  }
+  
+  /* th {
+      color:#000;
+      font-weight:600;
+  }
+  th, td {
+      border: 1px solid #444;
+      
+  }
+  
+  .table-responsive {
+      max-height: 70vh;
+      border-top: 1px solid #ddd;
+  }
+  
+  .table {
+      border-top:none;
+  } */
+  
+  .data-container {
+      margin-top: 20px;
+  }
+  
+  .readDatabutton{
+      margin: 10px; 
+      background: #ddd;
+  }
+  
+  
+  .error {
+      color: red;
+  }
+  .success {
+      color: green;
+  } 
+  
+  .modelForm{
+      font-size:110% 
+  }
+      
+  ng-untouched ng-pristine .ng-valid{
+      height:30px;
+      width:30px;
+      line-height:30px; 
+  }
+   .checkboxx{
+      height: 22px;
+      width: 25px;
+      vertical-align: bottom;
+  }
+  .modelForm .table {
+      border-collapse: collapse;
+  }
+  .modelForm table, th, td {
+      border: none;
+  }
+  
+  .floatright{
+      float:right;
+      max-height: 150px;
+  }
+  .floatt{
+        float:right;
+        align:right
+  }
+  .padder{
+      padding:8px 45px
+  }
+  
+  .adj1{
+       padding:6px 35px;
+           margin-left:12px;
+  }
+  .bolder{
+      font-weight:600; 
+  }
+  .borderline{
+      padding:40px 5px ; 
+  }
+  .box{
+      padding: 30px;
+      border-left: 2px solid #1062a9;
+      margin-bottom: 20px;
+  }
+  .box1{
+      padding: 10px 10px 25px 15px;
+      /* border-left: 2px solid #1062a9; */
+      margin-bottom: 15px;
+      font-family: 'Noto Sans', sans-serif;
+  }
+  .box-shadow{
+      box-shadow: 0 2px 4px 0 rgba(0,0,0,0.16),0 2px 10px 0 rgba(0,0,0,0.12)!important;
+  }
+  .uploadblock p , .uploadblock button{
+      font-family: 'Noto Sans', sans-serif;
+  }
+  .alert p{
+      font-family: 'Noto Sans', sans-serif;
+  }
+  .progress {
+      margin: 10px 0px;
+      width: 40%;
+      font-size: 11px;
+    }
+    .mar10-0{
+        margin: 10px 0px;
+    }
+    .mar10{
+        margin: 0px 0px 10px 10px;
+    }
+    select {
+      padding:10px !important; 
+      width:100%;
+      border: 1px solid #ced4da;
+  }
+    .selectoropt option{
+      background: #fff;
+      color: #333333;
+  }
+  .selectoropt option:focus{
+      background: #fff;
+      color: #333333;
+      z-index: 1001;
+  }
+  .errmsg{
+      position: absolute;
+      top: 3px;
+      right: 0px;
+      z-index: 1001;
+      /* left: 60pc; */
+  }
+  .errmsg .alert{
+      box-shadow: 0px 0px 5px 0.2px;
+  }
+  .errmsg .alert button{
+      right: -8px;
+  top: 2px;
+  font-size: 16px;
+  }
+  /* Tables */
+  table.exceltbl {
+      width:100%;
+      margin-bottom:1em;
+      border-collapse: collapse;
+      font:0.75em/1.5 sans-serif;
+      color:#333;
+  }
+  table.exceltbl  th{
+      font-weight:bold;
+      background-color:#ddd;
+  }
+  table.exceltbl  th{
+      width: 4%;
+  }
+  table.exceltbl th,
+  table.exceltbl td{
+      padding:0.3em;
+      border:1px solid #ccc;
+  }
+  /* File Upload */
+  .files input {
+      outline: 2px dashed #92b0b3;
+      outline-offset: -10px;
+      -webkit-transition: outline-offset .15s ease-in-out, background-color .15s linear;
+      transition: outline-offset .15s ease-in-out, background-color .15s linear;
+      padding: 47px;
+      text-align: center !important;
+      margin: 0;
+      width: 65% !important;
+  padding-left: 20px;
+  }
+  .files input:focus{     outline: 2px dashed #92b0b3;  outline-offset: -10px;
+      -webkit-transition: outline-offset .15s ease-in-out, background-color .15s linear;
+      transition: outline-offset .15s ease-in-out, background-color .15s linear; border:1px solid #92b0b3;
+   }
+  .files{ position:relative}
+  .files:after {  pointer-events: none;
+      position: absolute;
+      top: 68px;
+  left: 0px;
+  width: 37px;
+  right: 0;
+  height: 45px;
+  content: "";
+  /* background-image: url(https://image.flaticon.com/icons/png/128/109/109612.png); */
+  display: block;
+  margin: 0 auto;
+  background-size: 100%;
+  background-repeat: no-repeat;
+  right: -35px;
+  }
+  .color input{ background-color:#f1f1f1;}
+  .files:before {
+      position: absolute;
+  bottom: 10px;
+  left: -160px;
+  pointer-events: none;
+  width: 100%;
+  right: 0;
+  height: 57px;
+  content: " or drag it here. ";
+  display: block;
+  margin: 0 auto;
+  color: #2ea591;
+  font-weight: 600;
+  text-transform: capitalize;
+  text-align: center;
+  }

@@ -1,0 +1,191 @@
+<app-header></app-header>
+
+<!--Weather Forecasting-->
+<div class="container-fluid">
+    <div class="col-sm-12">
+
+
+        <div class="box box-shadow">
+            <div class="uploadblock">
+                <div class="col-md-12">
+                    <p class="heading">Please Upload Data file in .csv or .excel format</p>
+                </div>
+                <!--        <input id="fileid" type="file" name="file" ng2FileSelect [uploader]="uploader" />-->
+
+                <div class="col-md-6">
+                    <form method="post" action="#" id="#">
+                        <div class="form-group files color">
+                            <label>Upload Your File </label>
+                            <input type="file" name="file" ng2FileSelect [uploader]="uploader" class="form-control"
+                                multiple="">
+                        </div>
+                    </form>
+					 <p *ngIf="showfileName"><b>Chosen File:</b> {{fileName}} </p>
+					 <p class="error">{{fileUploadErrorMessage}}</p>
+
+                </div>
+
+                <div class="col-md-6"></div>
+               <div *ngIf="ferrorr" class="col-md-4 errmsg">
+                    <div class="alert alert-danger alert-dismissable">
+                        <button aria-hidden="true" data-dismiss="alert" class="close" type="button">×</button>
+                        <p class="error">{{fileUploadErrorMessage}} </p>
+                    </div>
+                </div>
+                <br />
+                <div class="clearfix"></div>
+
+                <div class="col-md-12">
+                    <div class="slimbar-container">
+                        <ng2-slim-loading-bar></ng2-slim-loading-bar>
+                    </div>
+                </div>
+
+                <div class="clearfix"></div>
+                <div class="col-md-12">
+                    <button type="button" id="btnupload" class="btn btn-success btn-sm mar10-0" (click)="uploader.uploadAll()"
+                        [disabled]="!uploader.getNotUploadedItems().length">
+                        Preview
+                    </button>
+                </div>
+                <br />
+                <br />
+               
+            </div>
+            <div *ngIf="datatablediv" class="myDiv">
+                <div class="row data-container">
+                    <div class="col-md-12">
+                        <div class="table-responsive">
+                            <table class="table table-bordered">
+                                <thead>
+                                    <tr>
+                                        <th *ngFor="let h of headersList">{{h}}</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr *ngFor="let datarow of dataArray">
+                                        <td *ngFor="let dataField of datarow">{{dataField}}</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+                <ul class="list-inline floatt">
+                    <li class="list-inline-item">
+                        <button id="readCSV" name="readcsv" class="btn btn-info floatright" (click)="uploadsuccess()">Upload</button>
+                    </li>
+                    <li class="list-inline-item">
+                        <button id="readCSV" name="readcsv" class="btn btn-info floatright" (click)="uploadcancel()">Cancel</button>
+                    </li>
+                </ul>
+            </div>
+            <div class="clearfix"></div>
+        </div>
+       
+
+
+
+
+        <div class="box box-shadow">
+            <div class="col-md-4 errmsg">  </div>
+            <p class="error">{{errorMessage}} </p>
+            <form class="modelForm" [formGroup]="modelForm" (ngSubmit)="onFormSubmit()">
+                <div class="col-md-4 errmsg">                </div>
+                <p class="heading">Please Select the Model qqqq</p>
+                <select class="selector col-xs-8 selectoropt" formControlName="modeltype">
+                    <!-- formControlName="modeltype" -->
+                    <!--     <option value="">Select-Model</option>-->
+                    <option [ngValue]="null">Select-Model</option>
+                    <option value="Regression">Regression</option>
+                    <option value="Classification">Classification</option>
+                </select>
+                
+                <img *ngIf="modelgif" src="../../assets/images/giphy.gif" width="60px" height="60px" class="dtma img-responsive" />
+                <button class="btn btn-success btn-sm padder mar5">Submit111111</button>
+                <!-- <a class="pull-left" routerLink="/progess">Progess</a>-->
+            </form>
+
+            <div class="col-md-12 errmsg">
+         
+            </div>
+            <div class="clearfix"></div>
+        </div>
+
+
+
+
+        <div class="box box-shadow">
+            <p class="heading">Please Select the Model qqqq</p>
+            <h3 class="text-left">Edit User</h3>
+            <div class="row">
+               
+                 <form class="modelForm" [formGroup]="modelInputForm" (ngSubmit)="onAPIFormSubmit()">
+                <div class="col-sm-7">
+                    <p class="error">{{errorMessage}} </p>
+                    <div class="form-group">
+                       
+                        <input type="text" formControlName="username" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.username.errors }" />
+                        <div *ngIf="submitted && f.username.errors" class="invalid-feedback">
+                            <div *ngIf="f.username.errors.required">Username is required</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-3"> <button class="btn btn-success btn-sm padder mar5">Input Submit</button> </div>
+            </form>
+              </div>
+        </div>
+
+
+        <div class="clearfix"></div>
+        <div class="box box-shadow">
+            <h3 class="text-left">Service: employer-service</h3>
+            <div class="col-md-4 errmsg"> </div>
+            <button class="btn btn-success" [routerLink]="['/add-jobseeker']">Create app-list-employer</button>
+           <button class="btn btn-success" [routerLink]="['/list-jobseeker']">List Employers</button>
+            <div class="clearfix"></div>
+        </div>
+
+
+        <div class="clearfix"></div>
+        <div class="box box-shadow">
+            <h3 class="text-left">Service: jobseeker-service</h3>
+            <div class="col-md-4 errmsg"> </div>
+            <button class="btn btn-success" [routerLink]="['/add-jobseeker']">Create JobSeeker</button>
+           <button class="btn btn-success" [routerLink]="['/list-jobseeker']">List Profiles</button>
+            <div class="clearfix"></div>
+        </div>
+
+
+        <div class="clearfix"></div>
+        <div class="box box-shadow">
+            <h3 class="text-left">Service Communication</h3>
+            <div class="col-md-4 errmsg"> </div>
+            <button class="btn btn-success" [routerLink]="['/add-jobseeker']">Get Profiles List </button>
+            <div class="clearfix"></div>
+        </div>
+
+
+
+        <div class="box box-shadow">
+        <div class="row">
+            <div class="col-sm-3"><a class="btn btn-success" [routerLink]="['/excelupload']"> Excel Uploader</a></div>
+            <div class="col-sm-3"><a class="btn btn-success" [routerLink]="['/manageuser']"> Manage User</a></div>
+            <div class="col-sm-3"><a class="btn btn-success" [routerLink]="['/manageuser']"> Manage User</a></div>
+          </div>
+          <br>
+          <div class="row">
+            <div class="col-sm-3"><a [routerLink]="['/add-jobseeker']"> Add JobSeeker</a></div>
+            <div class="col-sm-3"><a [routerLink]="['/edit-jobseeker']"> Edit JobSeeker</a></div>
+            <div class="col-sm-3"><a [routerLink]="['/list-jobseeker']"> List JobSeeker</a></div>
+          </div>
+        </div>
+ 
+
+
+
+
+    </div>
+</div>
+
+<app-footer></app-footer>

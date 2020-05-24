@@ -1,0 +1,224 @@
+@import "~bootstrap/dist/css/bootstrap.min.css";
+@import 'https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css';
+/*@import "../node_modules/ngx-toastr/toastr.css";*/
+
+/*@import"/style1.css";*/
+
+body {
+    margin: 0;
+    font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #212529;
+    text-align: left;
+    background-color: #fff;
+}
+body {
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-size: 16px;
+    line-height: 1.42857143;
+    color: #333;
+    background-color: #fff;
+}
+body {
+    margin: 0;
+    font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #212529;
+    text-align: left;
+    background-color: #fff;
+}
+body {
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-size: 14px;
+    line-height: 1.42857143;
+    color: #333;
+    background-color: #fff;
+}
+
+.btn{font-size: 14px;}
+.dropdown-menu>li>a {
+    display: block;
+    padding: 8px 20px;
+    clear: both;
+    font-weight: 400;
+    line-height: 1.42857143;
+    color: #333;
+    white-space: nowrap;
+    font-size: 14px;
+}
+.dropdown-menu{
+    min-width:156px; 
+    text-align:left !important; 
+}
+.liitem{
+    border-bottom:1px solid #fff;
+}
+/*.dropdown-menu li{
+    border:1px solid #ddd; 
+}*/
+.cleartop{clear:top;
+clear:both}
+
+.liitem a{
+    float:left !important; 
+}
+.liitem a:hover{
+    text-decoration: underline !important;
+}
+.form-control{
+    font-size:15px; 
+}
+.lgnadjuster{
+    padding:8px 30px;
+    margin-top:10px;
+}
+.box{
+    padding: 30px;
+    border-left: 2px solid #1062a9;
+    margin-bottom: 20px;
+}
+.box1{
+    padding: 10px 10px 25px 15px;
+    /* border-left: 2px solid #1062a9; */
+    margin-bottom: 15px;
+    font-family: 'Noto Sans', sans-serif;
+}
+.box2{
+    padding: 10px 10px 25px 15px;
+    /* border-left: 2px solid #1062a9; */
+    margin-bottom: 15px;
+    font-family: 'Noto Sans', sans-serif;
+    background: #fbfbfb;
+}
+.box-shadow{
+    box-shadow: 0 2px 4px 0 rgba(0,0,0,0.16),0 2px 10px 0 rgba(0,0,0,0.12)!important;
+}
+.marT20{
+    margin-top: 20px;
+}
+.mart50{
+    margin-top: 50px;
+}
+.paddTB{
+    padding: 50px 15px;
+}
+.modal-header .close{
+    font-size: 2rem;
+}
+select.selectoropt{
+    padding: 5px 4px;
+    min-width: 200px;
+    margin: 5px;
+}
+select.selectoropt option{
+    background: #fff;
+    color: #333333;
+    padding: 4px;
+}
+select.selectoropt option:focus{
+    background: #fff;
+    color: #333333;
+    z-index: 1001;
+}
+.mar1520{
+    margin: 15px 20px;
+}
+.mar5{
+    margin: 5px;
+}
+/* Custom Radio Button Start*/
+
+.radiotextsty {
+    color: #333346;
+    font-size: 14px;
+  }
+  
+  .customradio {
+    display: block;
+    position: relative;
+    padding-left: 30px;
+    margin-bottom: 0px;
+    cursor: pointer;
+    font-size: 18px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+  }
+  
+  /* Hide the browser's default radio button */
+  .customradio input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+  }
+  
+  /* Create a custom radio button */
+  .checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 22px;
+    width: 22px;
+    background-color: white;
+    border-radius: 50%;
+    border:1px solid #BEBEBE;
+  }
+  
+  /* On mouse-over, add a grey background color */
+  .customradio:hover input ~ .checkmark {
+    background-color: transparent;
+  }
+  
+  /* When the radio button is checked, add a blue background */
+  .customradio input:checked ~ .checkmark {
+    background-color: white;
+    border:1px solid #BEBEBE;
+  }
+  
+  /* Create the indicator (the dot/circle - hidden when not checked) */
+  .checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+  }
+  
+  /* Show the indicator (dot/circle) when checked */
+  .customradio input:checked ~ .checkmark:after {
+    display: block;
+  }
+  
+  /* Style the indicator (dot/circle) */
+  .customradio .checkmark:after {
+    top: 2px;
+    left: 2px;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background: #007bff;
+  }
+
+
+  .btn{
+      padding:8px 20px;
+      border-radius: 4px;;
+  }
+  
+  /* Custom Radio Button End*/
+
+  h2 {
+      color: firebrick;
+      font-weight: 800;
+      font-size:24px;
+  }
+
+  h3 {
+    color: firebrick;
+    font-weight: 800;
+    font-size: 20px;
+    margin:20px;
+}

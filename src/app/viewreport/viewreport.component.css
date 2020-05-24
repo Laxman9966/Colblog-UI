@@ -1,0 +1,123 @@
+
+.heading{
+    font-size:16px;
+    font-weight: 500;
+    color:#aaa;
+}
+.header{
+    background:#6C4; 
+    min-height:72px; 
+}
+h5 {
+    text-align: left;
+    margin-left: 150px;
+    font-size:15px;
+    margin-top:5px; 
+}
+
+a {
+    color: #007bff;
+    text-decoration: none;
+    background-color: transparent;
+    float: right;
+}
+
+.welcomeuser{
+  margin-right:120px;
+    font-size:15px;
+    float:right;
+}
+.userlogin{
+    text-align: right;
+    margin-right:120px;
+    font-size:15px;
+    color:#0069d9;
+    vertical-align:bottom; 
+    line-height: 60px;
+}
+
+.containerbox{
+  margin:25px;
+background:#eee; 
+  border: 1px solid #efefef;
+  border-radius:3px;
+  padding: 50px 50px;
+   justify-content: center;
+    align-items: center;
+    margin-left: 200px;
+}
+
+
+.selector{
+    width: 330px;
+    padding: 4px;
+    border-radius: 4px;
+}
+
+.datagrid{
+    padding:15px;
+}
+.tabler{
+    width : 100%;
+}
+
+/* th {
+    color:#000;
+    font-weight:600;
+}
+th, td {
+    border: 1px solid #444;
+    
+}
+
+.table-responsive {
+	max-height: 70vh;
+	border-top: 1px solid #ddd;
+}
+
+.table {
+	border-top:none;
+} */
+
+.data-container {
+	margin-top: 20px;
+}
+
+.readDatabutton{
+    margin: 10px; 
+    background: #ddd;
+}
+
+
+.error {
+    color: red;
+}
+.success {
+    color: green;
+} 
+
+.modelForm{
+    font-size:110% 
+}
+    
+ng-untouched ng-pristine .ng-valid{
+    height:30px;
+    width:30px;
+    line-height:30px; 
+}
+ .checkboxx{
+    height: 22px;
+    width: 25px;
+    vertical-align: bottom;
+}
+.modelForm .table {
+    border-collapse: collapse;
+}
+.modelForm table, th, td {
+    border: none;
+}
+
+.floatright{
+    float:right;
+    max-height: 150px;
+}

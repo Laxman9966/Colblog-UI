@@ -1,0 +1,54 @@
+ 
+<app-header></app-header>
+
+
+<br>
+
+    <a routerLink="/home" class="btn btn-info righter">Back</a>
+<br>
+    
+
+<div class="container">
+  <div class="row justify-content-center">
+      <h1> Analytic Dashboard</h1>
+  </div>
+</div>
+
+<div class="row">
+    <ul class="col-md-12" id="phones">
+        <li class="thumbnail" *ngFor="let chart of charts">
+
+  
+    <google-chart height="250"
+    [title]="chart.title"
+    [type]="chart.type"
+    [data]="chart.data"
+    [columnNames]="chart.columnNames"
+    [roles]="chart.roles"
+    [options]="chart.options"
+    (ready)="onReady()"
+    (select)="onSelect($event)"
+    (error)="onError($event)"
+    (mouseenter)="onMouseEnter($event)"
+    (mouseleave)="onMouseLeave($event)">
+  </google-chart>
+    
+<!--    <br><br><br><br>-->
+ </li>
+    </ul>
+</div>
+<!--
+<google-chart #chart
+    width="600"
+    [title]="changingChart.title"
+    [type]="changingChart.type"
+    [data]="changingChart.data"
+    [columnNames]="changingChart.columnNames"
+    [options]="changingChart.options">
+  </google-chart>-->
+
+<!--<button (click)="changeChart()">Change Data</button>
+<button (click)="navigateToTest()">Navigate</button>-->
+<div class="cleartop"></div>
+
+<app-footer></app-footer>

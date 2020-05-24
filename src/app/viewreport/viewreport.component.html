@@ -1,0 +1,36 @@
+ 
+<app-header></app-header>
+
+
+<br>
+
+    <a routerLink="/home" class="btn btn-info floatright">Back</a>
+<br>
+
+  <div class="row data-container">
+	<div class="col-md-12">
+		<div class="table-responsive">
+			<table class="table table-bordered">
+				<thead>
+					<tr>
+						<th *ngFor="let h of headersList">{{h}}</th>
+
+					</tr>
+				</thead>
+				<tbody>
+		<tr *ngFor="let datarow of dataArray">
+					
+<td *ngFor="let dataField of datarow">{{dataField}}</td>
+                    </tr>
+				</tbody>
+			</table>
+		</div>
+	</div>
+</div>  
+
+
+<br>
+<br>
+<div class="cleartop"></div>
+
+<app-footer></app-footer>

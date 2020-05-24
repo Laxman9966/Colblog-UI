@@ -1,0 +1,136 @@
+
+.container {
+/*    background:#49b856; */
+}
+
+h3{
+    text-align: center;
+}
+/*https://mycolor.space/gradient*/
+.loginbox{
+    /* background-image: linear-gradient(to right top, #051937, #004d7a, #008793, #00bf72, #a8eb12); */
+    /* background: url('../../assets/images/login-bg.jpg');
+    background-size: cover; */
+    background: #fff;
+    padding:43px; 
+}
+.loginbg{
+    background:#fff;
+    box-shadow: 0px 0px 10px 0.2px;
+}
+.form-top{
+    padding:15px 5px !important; 
+}
+input, optgroup, select, textarea {
+    padding:20px !important; 
+}
+
+select {
+    padding:10px !important; 
+    width:100%;
+    border: 1px solid #ced4da;
+}
+
+button{
+    padding:12px !important; 
+/*    background: #0000FF;*/
+}
+
+#contact h2 {
+    margin-top: 10px;
+    margin-bottom: 15px;
+    padding-bottom: 15px;
+}
+.section-title h2 {
+    position: relative;
+    margin-top: 10px;
+    margin-bottom: 15px;
+    padding-bottom: 15px;
+}
+.contact{
+    background:#49b856; 
+}
+.adjuster{
+    padding-left: 200px;
+    padding-top: 50px;
+    padding-bottom:140px;
+}
+h5 {
+    text-align: center;
+}
+.width100{
+    width:100%;
+}
+.containerbox{
+/*   position: absolute;
+  z-index: 15;
+  top: 50%;
+  left: 50%;
+  margin: -200px 0 0 -300px;*/
+  background: #49b856;
+  border-radius: 10px;
+  padding: 20px;
+}
+
+
+.error{
+    color: #dc3545;
+}
+
+.footer{
+    background-color: #424242;
+    padding: 30px 0;
+}
+.footer p {
+    font-size: 14px;
+}
+.site-footer {
+    background-color: #424242;
+}
+.site-footer {
+    clear: both;
+    width: 100%;
+}
+.site-footer .site-info {
+    max-width: 1024px;
+    margin: 0 auto;
+    color: #fff;
+    font-size: 1.1em;
+    font-weight: 600;
+    padding: 0;
+}
+.site-footer .footerLogo {
+    margin-top: 1em;
+    padding: 0;
+}
+a {
+    color: #337ab7;
+    text-decoration: none;
+}
+.site-footer .site-info p {
+    margin: 0;
+}
+.selectoropt option{
+    background: #fff;
+    color: #333333;
+}
+.selectoropt option:focus{
+    background: #fff;
+    color: #333333;
+    z-index: 1001;
+}
+.errmsg{
+    position: absolute;
+    top: 3px;
+    right: 0px;
+    z-index: 1001;
+    /* left: 60pc; */
+}
+.errmsg .alert{
+    box-shadow: 0px 0px 5px 0.2px;
+}
+.errmsg .alert button{
+    right: -8px;
+top: 2px;
+font-size: 16px;
+}

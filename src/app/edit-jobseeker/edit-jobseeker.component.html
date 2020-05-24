@@ -1,0 +1,37 @@
+<app-header></app-header>
+
+
+<div class="col-md-6">
+  <h2 class="text-center">Edit User</h2>
+  <form [formGroup]="editForm" (ngSubmit)="onSubmit()">
+    
+    <div class="form-group">
+      <label for="lastName">Name:</label>
+      <input formControlName="name" placeholder="Name" name="lastName" class="form-control" id="name">
+    </div>
+
+    <div class="form-group">
+      <label for="firstName">Resume Title:</label>
+      <input formControlName="resumeTitle" placeholder="Resume Title" name="resumeTitle" class="form-control" id="resumeTitle">
+    </div>
+
+    <div class="form-group">
+      <label for="firstName">Experience:</label>
+      <input formControlName="experience" placeholder="Resume Title" name="experience" class="form-control" id="experience">
+    </div>
+
+    <div class="form-group">
+      <label for="email">Email address:</label>
+      <input type="email" formControlName="email" placeholder="Email" name="email" class="form-control" id="email">
+    </div>
+
+    <div class="form-group">
+      <label for="firstName">Password:</label>
+      <input formControlName="password" placeholder="Resume Title" name="password" class="form-control" id="password">
+    </div>
+   
+    <button class="btn btn-success">Update</button>
+  </form>
+</div>
+
+<app-footer></app-footer>

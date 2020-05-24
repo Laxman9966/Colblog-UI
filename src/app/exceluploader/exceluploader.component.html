@@ -1,0 +1,91 @@
+<app-header></app-header>
+
+<!--Weather Forecasting-->
+<div class="container-fluid">
+    <div class="col-sm-12">
+
+
+       
+
+
+        <div class="box box-shadow">
+            <div class="uploadblock">
+                <div class="col-md-12">
+                    <p class="heading">Please Upload Data file in .csv or .excel format</p>
+                </div>
+                <!--        <input id="fileid" type="file" name="file" ng2FileSelect [uploader]="uploader" />-->
+
+                <div class="col-md-6">
+                    <form method="post" action="#" id="#">
+                        <div class="form-group files color">
+                            <label>Upload Your File </label>
+                            <input type="file" name="file" ng2FileSelect [uploader]="uploader" class="form-control"
+                                multiple="">
+                        </div>
+                    </form>
+					 <p *ngIf="showfileName"><b>Chosen File:</b> {{fileName}} </p>
+					 <p class="error">{{fileUploadErrorMessage}}</p>
+
+                </div>
+
+                <div class="col-md-6"></div>
+               <div *ngIf="ferrorr" class="col-md-4 errmsg">
+                    <div class="alert alert-danger alert-dismissable">
+                        <button aria-hidden="true" data-dismiss="alert" class="close" type="button">×</button>
+                        <p class="error">{{fileUploadErrorMessage}} </p>
+                    </div>
+                </div>
+                <br />
+                <div class="clearfix"></div>
+
+                <div class="col-md-12">
+                    <div class="slimbar-container">
+                        <ng2-slim-loading-bar></ng2-slim-loading-bar>
+                    </div>
+                </div>
+
+                <div class="clearfix"></div>
+                <div class="col-md-12">
+                    <button type="button" id="btnupload" class="btn btn-success btn-sm mar10-0" (click)="uploader.uploadAll()"
+                        [disabled]="!uploader.getNotUploadedItems().length">
+                        Preview
+                    </button>
+                </div>
+                <br />
+                <br />
+               
+            </div>
+            <div *ngIf="datatablediv" class="myDiv">
+                <div class="row data-container">
+                    <div class="col-md-12">
+                        <div class="table-responsive">
+                            <table class="table table-bordered">
+                                <thead>
+                                    <tr>
+                                        <th *ngFor="let h of headersList">{{h}}</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr *ngFor="let datarow of dataArray">
+                                        <td *ngFor="let dataField of datarow">{{dataField}}</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+                <ul class="list-inline floatt">
+                    <li class="list-inline-item">
+                        <button id="readCSV" name="readcsv" class="btn btn-info floatright" (click)="uploadsuccess()">Upload</button>
+                    </li>
+                    <li class="list-inline-item">
+                        <button id="readCSV" name="readcsv" class="btn btn-info floatright" (click)="uploadcancel()">Cancel</button>
+                    </li>
+                </ul>
+            </div>
+            <div class="clearfix"></div>
+        </div>
+      </div>
+    </div>
+
+    <app-footer></app-footer>

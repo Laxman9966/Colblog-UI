@@ -1,0 +1,83 @@
+<!--<div id="chatbot-chat" style="pointer-events: none; background-color: transparent; z-index: 2147483639; max-height: 100%; position: fixed; right: 0px; bottom: 0px; border: 0px none; width: 100px; height: 100px; overflow: hidden; visibility: visible;" class="chatbot-chat-closed-mobile">
+  <iframe id="chatbot-chat-frame" src="https://cdn.chatbot.com/widget/chat.html?id=5aa8bd607eefe000078cb61a&amp;branding=true&amp;v=283" style="pointer-events: all; background: rgba(0, 0, 0, 0) none repeat scroll 0% 0%; border: 0px none; float: none; position: absolute; top: 0px; right: 0px; bottom: 0px; left: 0px; width: 100%; height: 100%; margin: 0px; padding: 0px;">
+</iframe>
+</div>-->
+
+<!--<div id="chatbot-chat" style="pointer-events: none; background-color: transparent; z-index: 2147483639; max-height: 100%; position: fixed; right: 0px; bottom: 0px; border: 0px none; width: 100px; height: 100px; overflow: hidden; visibility: visible;" class="chatbot-chat-closed-mobile">
+    <a href="#" class="buttom-btn open-btn" id="entpBotAnchor">
+        <i class="material-icons" style="font-size:36px"></i>Click Here
+    </a>
+</div>-->
+
+
+<div class="text-center chaticon">
+        <div class="bottom-btn1 text-right"> <!--round hollow-->
+        <a href="javascript:void(0);" id="entpBotAnchor">
+                <!-- <i class="material-icons chaticon" style="font-size:36px"></i>
+				<img class="md-user-image" style="width: 84px;" src="../../assets/images/image.png"> -->
+				<div id="chat_button" class="bubble md-user-image" style="background: rgb(76, 175, 80); color: rgb(250, 250, 250);">
+					<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" style="stroke: rgb(250, 250, 250);">
+						<path d="M9.37,1.34H10.8a8.2,8.2,0,0,1,0,16.39H9.37a10,10,0,0,1-2.68-.45c-.55-.15-2.23,1.81-2.63,1.36s.05-2.79-.41-3.23q-.28-.27-.54-.57A8.2,8.2,0,0,1,9.37,1.34Z" style="fill: none;"></path>
+						 <line x1="6.37" y1="7.04" x2="12.58" y2="7.04" style="fill: none; stroke-linecap: round;"></line> 
+						 <line x1="6.37" y1="9.66" x2="14.31" y2="9.66" style="fill: none; stroke-linecap: round;"></line> 
+						 <line x1="6.37" y1="12.28" x2="11.42" y2="12.28" style="fill: none; stroke-linecap: round;"></line>
+						</svg>
+					</div>
+            </a>
+        </div>
+</div>
+
+
+<aside id="entpBotWindow" class="tabbed_sidebar ng-scope chat_sidebar">
+	<div class="popup-head">
+		<div class="popup-head-left pull-left">
+			<img class="md-user-image" src="../../assets/images/bot1.png">
+			<h1 id="userId">INSCIA-Inventory</h1>
+	
+		</div>
+		<div class="popup-head-right pull-right">
+			<button data-widget="remove" id="removeClass"
+				class="chat-header-button pull-right" type="button">
+				<span class="glyphicon glyphicon-remove" aria-hidden="true"></span>
+				<!--  <i class="material-icons">&#xe14c;</i> -->
+			</button>
+		</div>
+	</div>
+
+<div id="entpBotChatBox" class="chat_box_wrapper chat_box_small chat_box_active" style="opacity: 1; display: block; transform: translateX(0px);">
+    <div id="entpBotContbox" class="chat_box touchscroll chat_box_colors_a">
+        <div class="chat_message_wrapper chat_message_right">
+            <div class="chat_user_avatar">
+                <img class="md-user-image" src="../../assets/images/bott.png">
+            </div>
+            <ul class="chat_message">
+                <li>
+			<span id="ftime" class="chat_message_time"></span>
+                <p>Hi, Mr.Joe.Capharo How may I assist you today?</p>                                           
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+	<div class="chat_submit_box">
+	    <div class="uk-input-group">
+	        <div class="gurdeep-chat-box">
+	        <input type="text" placeholder="Type a message" id="input" name="submit_message" class="md-input">
+
+	        </div>
+	    <span class="uk-input-group-addon">
+		<!--<button id="trigger-recognition"></button>-->
+		 <!--<button id="vid" onclick="startVoicChat()" type="button" src="images/mic.gif" style="width:25px;height:32px;"></button>-->
+		 <input type="image" id="vid" onclick="startVoicChat()" value="Submit" src="../../assets/images/mic.gif" class=" btn fa-chevron-voice-right"/>
+		 <input type="submit" id="entpBotSend" value="Submit" class="btn fa-chevron-circle-right"/>
+		<!--  <input type="submit" id="entpBotSendd" value="Save" onclick="saveTextAsFile()" class="btn fa-chevron-circle-right"/>-->
+		 
+	    </span>
+	    </div>
+	</div>
+	
+	<!--top:50%;left:50%;padding:2px; style="display:none;position:absolute;top:80%;left:70%;" class="nodisplay chat_message_right" chat_message_wrapper chat_message_right -->
+	<div id="wait" style="display:none;position:absolute;top:80%;left:70%;"><img src='../../assets/images/spin2.gif'/><br>Loading..</div>
+        
+</aside>
